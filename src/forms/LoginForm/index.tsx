@@ -22,6 +22,7 @@ export default function Login() {
         }}
       >
         <div className="eslog">
+        <h1>Buca Só!</h1>
           <h1>Desfrute dos melhores livros!</h1>
           <span>
             A sua conta e desfrute dos melhres livros, angolanos, brasileiros,

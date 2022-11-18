@@ -7,6 +7,7 @@ export const Content = styled.div`
    padding:10px;
    margin-top:10px;
    z-index:10; 
+   background: #fff;
 `;
 
 export const FooterCard = styled.div`

@@ -56,6 +56,7 @@ export const ContentSession = styled.section`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 
   .card-category {
     flex: 1.2;

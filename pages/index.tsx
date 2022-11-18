@@ -1,6 +1,6 @@
 import Layout from "@components/layout";
 import { Bainner } from "@components/shared/Bainner";
-import { MainLayout } from "@components/shared/MainLayout";
+import { MainLayout } from "@components/MainLayout";
 import { getServerSidePropsWithSession } from "@utils/getServerSidePropsWithSession";
 import Head from "next/head";
 import { TNextPageWithLayout } from "./_app";

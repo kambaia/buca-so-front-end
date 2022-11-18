@@ -14,12 +14,12 @@ export const CardLogin = styled.div`
    justify-content:flex-end;
    display:flex;
    .eslog{
-    justify-content:center;
-    flex-direction:column;
     display:flex;
     align-items:center;
+    justify-content:center;
+    flex-direction:column;
     padding:20px;
-    width:50%;
+    width:60%;
    }
    h1{
      color:#fff;

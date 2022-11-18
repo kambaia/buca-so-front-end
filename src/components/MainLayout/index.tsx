@@ -1,3 +1,4 @@
+import CardBox from "@components/Books/CardBooks";
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
@@ -5,7 +6,7 @@ import * as FaIcons from "react-icons/fa";
 import { ContentCategoria, ContentSession, MainContainner } from "./styles";
 
 export function MainLayout() {
-  const [livros, setLivros] = useState([]);
+  const [books, setBooks] = useState([]);
 
   return (
     <MainContainner>
@@ -15,10 +16,13 @@ export function MainLayout() {
           lg={3}
           xs={12}
           md={12}
-          sx={{ mt: 2, height: { xs: "100%", lg: "100%", border: '1px solid #f00' } }}
+          sx={{
+            mt: 2,
+            height: { xs: "100%", lg: "100%", border: "1px solid #f00" },
+          }}
           order={{ md: 1, lg: 1, sx: 2 }}
         >
-          <Categoria titulo="Categorias"/>
+          <Categoria titulo="Categorias" />
         </Grid>
         <Grid
           item
@@ -26,13 +30,12 @@ export function MainLayout() {
           xs={12}
           md={12}
           order={{ md: 2, lg: 2, sx: 1 }}
-          sx={{ mt: 2, height: { xs: "100%", lg: "100%", border: '1px solid #f00' } }}
+          sx={{
+            mt: 2,
+            height: { xs: "100%", lg: "100%", border: "1px solid #f00" },
+          }}
         >
-
-
-            hhhdhdhdhdh
-            sjsjsjjsjs
-            shshshshsh
+          <CardBox books={books}/>
         </Grid>
       </Grid>
 
@@ -61,40 +64,37 @@ export function MainLayout() {
   );
 }
 
-
-
 const Categoria = ({ titulo, style }: any) => {
   const categoria = [
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-    {categoria: 'Romance', _id: 10 },
-  
-  ]
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+    { categoria: "Romance", _id: 10 },
+  ];
   return (
     <>
       <ContentCategoria>
@@ -104,20 +104,19 @@ const Categoria = ({ titulo, style }: any) => {
             <h2 style={{ color: style ? "#f0f" : "#000" }}> {titulo} </h2>
           </div>
           <ul>
-            {
-              categoria.map((item, index) => (
-                <li key={index}>
+            {categoria.map((item, index) => (
+              <li key={index}>
+                {" "}
+                <a href={`/livros/${item.categoria}/${item._id}`}>
                   {" "}
-                  <a href={`/livros/${item.categoria}/${item._id}`}>
+                  <span>
                     {" "}
-                    <span>
-                      {" "}
-                      <FaIcons.FaAngleRight />{" "}
-                    </span>
-                    {item.categoria}
-                  </a>{" "}
-                </li>
-              ))}
+                    <FaIcons.FaAngleRight />{" "}
+                  </span>
+                  {item.categoria}
+                </a>{" "}
+              </li>
+            ))}
           </ul>
         </div>
       </ContentCategoria>{" "}
